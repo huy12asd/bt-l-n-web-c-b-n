@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+</head>
+<body>
+    <ol class="ol-faq-sec">
+        <li class="faqItem">
+            <h3 class="faqBtn" onclick="toggleAnswer(this)">
+                Giống mèo nào thân thiện nhất ?
+              
+            </h3>
+            <div class="faqAnswer">Maine Coon là một trong <strong>các loại mèo</strong> thân thiện nhất! Đặc điểm nổi bật ở <strong>giống mèo</strong> Maine Coon là bộ lông sang trọng, thân hình to lớn, cùng đôi tai và bàn chân có búi lông. Là một trong <strong>các giống mèo</strong> có tính cách nhẹ nhàng, ôn hòa, thân thiện và dễ chịu nhất, mèo Maine Coon có khả năng chung sống hòa thuận đến bất ngờ với các thú cưng và mèo khác. Chính bởi thế mà chúng được gán cho biệt danh là "những gã khổng lồ thanh lịch". Nhưng nhìn chung, <strong>mèo các giống</strong>, dù là <strong>các giống mèo ta</strong> hay mèo ngoại, đều thân thiện và tình cảm khi được yêu thương và chăm sóc tận tình. 
+            </div>
+        </li>
+    </ol>
+
+
+</body>
+<script>
+    var isAnswerVisible = false;
+
+    function toggleAnswer(btn) {
+        var answer = btn.nextElementSibling;
+        var faqItem = btn.parentElement;
+        isAnswerVisible = !isAnswerVisible;
+        faqItem.classList.toggle('active');
+    }
+</script>
+<style>
+    .faqBtn.active .arrow {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+
+    .faqBtn .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .faqBtn.active:after {
+        content: '\f077';
+    }
+
+    .faqBtn:after {
+        font-size: 20px;
+        padding: 26px;
+        content: '\f078';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .faqItem .faqAnswer {
+        display: none;
+        padding-left: 10px;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .faqItem.active .faqAnswer {
+        display: block;
+        max-height: 500px; /* Maximum height for answer */
+        padding-top: 10px;
+    }
+</style>
+</html>
