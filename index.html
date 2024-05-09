@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    
 </head>
-<body>
+<body class="type1 pageLoaded" default-type="type1" style="overflow-y: auto;">
     <header class="header">
-        <div class="headerContainer custom-container">
+        <div class=" custom-container">
             <div class="navCon" >
                 <div class="navConRow">
                     <div class="navi-logo">
                         <a href="index.html">
                             <picture>
-                                <img src="logo.png" alt="logo meo" loading="lazy" width="130" height="87">
+                                <img src="logo/logo.png" alt="logo meo" loading="lazy" width="130" height="87">
                             </picture>
                         </a>
                     </div>
-                   
+                    <div class="navConRightTop">
+                        <ul class="list-inline">
+                            <li class="list-inline-item navLinkItem active">
+                                <a href="top dang nhap dang ky/dangnhap.html" title="Đăng nhập">Đăng nhập</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="top dang nhap dang ky/dangky.html" title="Đăng ký">Đăng ký</a>
+                            </li>
+                        </ul>
+
+                    </div>
                     <div class="navConRightMain">
                         <ul class="list-inline">
                             <li class="list-inline-item navLinkItem">
                                 <a href="index.html" title="Trang chủ">Trang chủ</a>
                             </li>
-                            <li class="list-inline-item navLinkitem hasSubMenu typeNarrow">
+                            <li class="list-inline-item navLinkItem hasSubMenu typeNarrow">
                                 <a href=""><span>Mèo Châu Âu</span></a>
                                 <div class="subMenuCon">
                                     <div class="row">
@@ -50,7 +60,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-inline-item navLinkitem hasSubMenu typeNarrow">
+                            <li class="list-inline-item navLinkItem hasSubMenu typeNarrow">
                                 <a href=""><span>Mèo Châu Á</span></a>
                                 <div class="subMenuCon">
                                     <div class="row">
@@ -75,7 +85,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-inline-item navLinkitem hasSubMenu typeNarrow">
+                            <li class="list-inline-item navLinkItem hasSubMenu typeNarrow">
                                 <a href=""><span>Mèo Châu Phi</span></a>
                                 <div class="subMenuCon">
                                     <div class="row">
@@ -157,18 +167,18 @@
     
     
         </div>
-        <div class="page_fluid section-breed">
+        <div class="page-fluid section-breed">
             <div class="row custom-container">
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meomylongngansource.webp" type="image/webp">
+                                <source srcset="ảnh source/meomylongngansource.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio1')">
-                                    <img src="meoanhlongngan.jpeg" class="audioIcon" loading="lazy" alt="Mèo mỹ lông ngắn">
+                                    <img src="ảnh/meoanhlongngan.jpeg" class="audioIcon" loading="lazy" alt="Mèo mỹ lông ngắn">
                                 </a>
                             </picture>
-                            <audio id="audio1" src="meo my long ngan.mp3"></audio>
+                            <audio id="audio1" src="tieng meo/meo my long ngan.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Mỹ lông ngắn</a> </div>
                     </div>
@@ -177,12 +187,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo ba tu source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo ba tu source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio2')">
-                                    <img src="meo ba tu img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Ba Tư">
+                                    <img src="ảnh/meo ba tu img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Ba Tư">
                                 </a>
                             </picture>
-                            <audio id="audio2" src="meo ba tu.mp3"></audio>
+                            <audio id="audio2" src="tieng meo/meo ba tu.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Ba Tư</a> </div>
                     </div>
@@ -191,12 +201,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo ba tu long ngan source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo ba tu long ngan source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio3')">
-                                    <img src="meo ba tu long ngan img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Ba Tư lông ngắn">
+                                    <img src="ảnh/meo ba tu long ngan img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Ba Tư lông ngắn">
                                 </a>
                             </picture>
-                            <audio id="audio3" src="meo ba tu long ngan.mp3"></audio>
+                            <audio id="audio3" src="tieng meo/meo ba tu long ngan.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Ba Tư lông ngắn</a> </div>
                     </div>
@@ -205,12 +215,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo begal source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo begal source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio4')">
-                                    <img src="meo begal img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Begal">
+                                    <img src="ảnh/meo begal img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Begal">
                                 </a>
                             </picture>
-                            <audio id="audio4" src="meo begal.mp3"></audio>
+                            <audio id="audio4" src="tieng meo/meo begal.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Begal</a> </div>
                     </div>
@@ -219,12 +229,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo tifanie source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo tifanie source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio5')">
-                                    <img src="meo tifanie img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Tifanie">
+                                    <img src="ảnh/meo tifanie img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Tifanie">
                                 </a>
                             </picture>
-                            <audio id="audio5" src="meo tifanie.mp3"></audio>
+                            <audio id="audio5" src="tieng meo/meo tifanie.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Tifanie</a> </div>
                     </div>
@@ -233,12 +243,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo xiem source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo xiem source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio6')">
-                                    <img src="meo xiem img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Birman">
+                                    <img src="ảnh/meo xiem img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Birman">
                                 </a>
                             </picture>
-                            <audio id="audio6" src="meo xiem.mp3"></audio>
+                            <audio id="audio6" src="tieng meo/meo xiem.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Birman</a> </div>
                     </div>
@@ -248,12 +258,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo anh long ngan source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo anh long ngan source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio7')">
-                                    <img src="meoanhlongngan.jpeg" class="audioIcon" loading="lazy" alt="Mèo Anh lông ngắn">
+                                    <img src="ảnh/meoanhlongngan.jpeg" class="audioIcon" loading="lazy" alt="Mèo Anh lông ngắn">
                                 </a>
                             </picture>
-                            <audio id="audio7" src="meo anh long ngan.mp3"></audio>
+                            <audio id="audio7" src="tieng meo/meo anh long ngan.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Anh lông ngắn</a> </div>
                     </div>
@@ -262,12 +272,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo tat trang source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo tat trang source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio8')">
-                                    <img src="meo tat trang img.jpeg" class="audioIcon" loading="lazy" alt="Mèo tất trắng">
+                                    <img src="ảnh/meo tat trang img.jpeg" class="audioIcon" loading="lazy" alt="Mèo tất trắng">
                                 </a>
                             </picture>
-                            <audio id="audio8" src="meo tat trang.mp3"></audio>
+                            <audio id="audio8" src="tieng meo/meo tat trang.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo tất trắng</a> </div>
                     </div>
@@ -276,12 +286,12 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo tai cup source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo tai cup source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio9')">
-                                    <img src="meo tai cup img.jpeg" class="audioIcon" loading="lazy" alt="Mèo tai cụp">
+                                    <img src="ảnh/meo tai cup img.jpeg" class="audioIcon" loading="lazy" alt="Mèo tai cụp">
                                 </a>
                             </picture>
-                            <audio id="audio9" src="meo tai cup.mp3"></audio>
+                            <audio id="audio9" src="tieng meo/meo tai cup.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo tai cụp</a> </div>
                     </div>
@@ -290,23 +300,22 @@
                     <div class="boxBreed">
                         <div class="img">
                             <picture>
-                                <source srcset="meo mogie source.webp" type="image/webp">
+                                <source srcset="ảnh source/meo mogie source.webp" type="image/webp">
                                 <a href="#" onclick="playSound(event,'audio10')">
-                                    <img src="meo mogie img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Moggie">
+                                    <img src="ảnh/meo mogie img.jpeg" class="audioIcon" loading="lazy" alt="Mèo Moggie">
                                 </a>
                             </picture>
-                            <audio id="audio10" src="meo moggie.mp3"></audio>
+                            <audio id="audio10" src="tieng meo/meo moggie.mp3"></audio>
                         </div>
                         <div class="text"> <a href="#">Mèo Moggie</a> </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page-fluid custom-container section-breeds-info">
+       
+        <div class="page-fluid custom-container section-breeds-info ">
             <h2 class="m-bottom-15">
-                
             Phân loại chung về các giống mèo dựa trên kích thước vóc dáng, nhu cầu chăm sóc, mức độ hoạt động, v.v.?
-        
             </h2>
             <p>
                 Mèo chủ yếu được phân thành
@@ -355,18 +364,18 @@
             <h2 class="m-bottom-15">Câu hỏi thường gặp về giống mèo</h2>
             <ol class="ol-faq-sec">
                 <li class="faqItem">
-                    <h3 class="faqBtn" onclick="toggleAnswer(this)">
+                    <h3 class="faqBtn"  onclick="toggleAnswer(this)">
                         Giống mèo nào thân thiện nhất ?
                      
                     </h3>
-                    <div class="faqAnswer">Maine Coon là một trong <strong>các loại mèo</strong> thân thiện nhất! Đặc điểm nổi bật ở <strong>giống mèo</strong> Maine Coon là bộ lông sang trọng, thân hình to lớn, cùng đôi tai và bàn chân có búi lông. Là một trong <strong>các giống mèo</strong> có tính cách nhẹ nhàng, ôn hòa, thân thiện và dễ chịu nhất, mèo Maine Coon có khả năng chung sống hòa thuận đến bất ngờ với các thú cưng và mèo khác. Chính bởi thế mà chúng được gán cho biệt danh là "những gã khổng lồ thanh lịch". Nhưng nhìn chung, <strong>mèo các giống</strong>, dù là <strong>các giống mèo ta</strong> hay mèo ngoại, đều thân thiện và tình cảm khi được yêu thương và chăm sóc tận tình. 
+                    <div class="faqAnswer" style="display: none;">Maine Coon là một trong <strong>các loại mèo</strong> thân thiện nhất! Đặc điểm nổi bật ở <strong>giống mèo</strong> Maine Coon là bộ lông sang trọng, thân hình to lớn, cùng đôi tai và bàn chân có búi lông. Là một trong <strong>các giống mèo</strong> có tính cách nhẹ nhàng, ôn hòa, thân thiện và dễ chịu nhất, mèo Maine Coon có khả năng chung sống hòa thuận đến bất ngờ với các thú cưng và mèo khác. Chính bởi thế mà chúng được gán cho biệt danh là "những gã khổng lồ thanh lịch". Nhưng nhìn chung, <strong>mèo các giống</strong>, dù là <strong>các giống mèo ta</strong> hay mèo ngoại, đều thân thiện và tình cảm khi được yêu thương và chăm sóc tận tình. 
                     </div>
                 </li>
                 <li class="faqItem">
                     <h3 class="faqBtn" onclick="toggleAnswer(this)">
                         Làm cách nào để nhận biết giống mèo ?
                     </h3>
-                    <div class="faqAnswer"><strong>Tất cả các giống mèo</strong> đều có những đặc điểm rất đặc trưng để giúp bạn phân biệt. Tuy nhiên, nếu bạn vẫn không thể xác định được <strong>giống mèo</strong> của mình, bạn có thể cho mèo làm xét nghiệm ADN. Xét nghiệm ADN không chỉ đảm bảo cho bạn biết chính xác tên giống mèo mà mèo cưng của bạn thuộc về mà còn giúp xác định chính xác các vấn đề sức khỏe mà bạn cần lưu ý.</div>
+                    <div class="faqAnswer" style="display: none;"><strong>Tất cả các giống mèo</strong> đều có những đặc điểm rất đặc trưng để giúp bạn phân biệt. Tuy nhiên, nếu bạn vẫn không thể xác định được <strong>giống mèo</strong> của mình, bạn có thể cho mèo làm xét nghiệm ADN. Xét nghiệm ADN không chỉ đảm bảo cho bạn biết chính xác tên giống mèo mà mèo cưng của bạn thuộc về mà còn giúp xác định chính xác các vấn đề sức khỏe mà bạn cần lưu ý.</div>
                     
                 </li>
                 <li class="faqItem">
@@ -374,28 +383,28 @@
                         Giống mèo nào phù hợp nhất để làm thú cưng ?
                      
                     </h3>
-                    <div class="faqAnswer"><strong>Mèo các giống</strong> đều có những điểm thú vị riêng, dù là <strong>các giống mèo ta</strong> hay mèo ngoại, nhưng nhìn chung, Maine Coon vẫn là cái tên được đánh giá cao hơn trong <stong>tất cả các giống mèo</stong> phù hợp nhất để làm thú cưng. Mèo Maine Coon không chỉ có thái độ điềm tĩnh, nhẹ nhàng mà còn cực kỳ hòa đồng với các vật nuôi khác cũng như con người, nên sẽ là những người bạn đồng hành lý tưởng trong mỗi gia đình. Ngoài ra, mèo Ragdoll cũng là <strong>giống mèo</strong> khá phổ biến để làm vật nuôi trong nhà.</div>
+                    <div class="faqAnswer" style="display: none;"><strong>Mèo các giống</strong> đều có những điểm thú vị riêng, dù là <strong>các giống mèo ta</strong> hay mèo ngoại, nhưng nhìn chung, Maine Coon vẫn là cái tên được đánh giá cao hơn trong <stong>tất cả các giống mèo</stong> phù hợp nhất để làm thú cưng. Mèo Maine Coon không chỉ có thái độ điềm tĩnh, nhẹ nhàng mà còn cực kỳ hòa đồng với các vật nuôi khác cũng như con người, nên sẽ là những người bạn đồng hành lý tưởng trong mỗi gia đình. Ngoài ra, mèo Ragdoll cũng là <strong>giống mèo</strong> khá phổ biến để làm vật nuôi trong nhà.</div>
                 </li>
                 <li class="faqItem">
                     <h3 class="faqBtn" onclick="toggleAnswer(this)">
                         Giống mèo nào cần ít chăm sóc cầu kì ?
                     </h3>
-                    <div class="faqAnswer">
+                    <div class="faqAnswer" style="display: none;">
                         <strong>Mèo các giống</strong> có các nhu cầu chăm sóc khác nhau. <strong>Giống mèo</strong> Anh lông ngắn nổi tiếng là có tính cách điềm tĩnh, dễ chịu, hòa đồng và ít đòi hỏi. Chúng không chỉ có sức bền mà còn có tuổi thọ tương đối cao, <stong>giống mèo</stong> Anh lông ngắn thường được coi là giống mèo ít cần chăm sóc cầu kỳ, nên sẽ là lựa chọn hoàn hảo để nuôi trong nhà.
                     </div>
                 </li>
             </ol>
         </div>
-        <section class="footerTop custom-container">
+        <section class="footerTop custom-container" style="display: flex; align-items: center;">
             <div class="footerTopItemCon">
                 <a href="index.html" class="brandLogo d-none d-lg-block">
                     <picture>
-                        <img src="logo.png" alt="logo meo" loading="lazy" width="130" height="87">
+                        <img src="logo/logo.png" alt="logo meo" loading="lazy" width="130" height="87">
                     </picture>
                 </a>
             </div>
-            <div class="footerTopItemCon">
-                <p>Mèo kun là trang web coi thông tin mèo đầy đủ nhất làm bởi nhóm 9</p>
+            <div class="footerTopItemCon" style="flex-grow: 1;">
+                <p class="d-none d-lg-block">Mèo kun là trang web coi thông tin mèo đầy đủ nhất làm bởi nhóm 9</p>
             </div>
             <div class="footerTopItemCon">
                 <label class="social-label">Theo dõi trang tại:</label>
@@ -408,14 +417,11 @@
     </div>
 </body>
 <script>
-    var isAnswerVisible = false;
-
+    
     function toggleAnswer(btn) {
-        var answer = btn.nextElementSibling;
-        var faqItem = btn.parentElement;
-        isAnswerVisible = !isAnswerVisible;
-        faqItem.classList.toggle('active');
-    }
+    var answer = btn.nextElementSibling;
+    answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
+}
     function playSound(event, audioId) {
         var audio = document.getElementById(audioId);
         audio.play();
@@ -426,5 +432,461 @@
 
 
 </script>
+<style>
+    .header {
+
+    background: linear-gradient(to right, rgba(167, 38, 142, 1) 4%, rgba(167, 38, 142, .8));
+}
+    @media (min-width: 992px) {
+    .navConRightMain .navLinkItem>a {
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: auto;
+        padding: 0 8px;
+        font-size: 30px;
+        font-family: RobotoBold;
+        color: #fff;
+        outline: 0;
+        text-decoration: none;
+    }
+}
+    .list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+ul {
+    display: block;
+   
+    margin-block-start: auto;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+@media (min-width: 1100px) {
+    .navConRightMain .navLinkItem {
+        height: 80px;
+        margin: 0 2px;
+    }
+}
+@media (min-width: 992px) {
+    .navConRightMain li {
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+@media (min-width: 1100px) {
+    .navConRightMain .navLinkItem.typeNarrow .subMenuCon {
+        width: auto;
+        left: auto;
+        z-index: 201;
+        background: #6b195b;
+        padding: 0;
+    }
+}
+@media (min-width: 1100px) {
+    .subMenuCon {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 25px;
+        text-align: left;
+        display: none;
+        -webkit-box-shadow: 0 3px 6px #00000029;
+        -moz-box-shadow: 0 3px 6px #00000029;
+        box-shadow: 0 3px 6px #00000029;
+    }
+}
+.subMenuCon {
+    display: none; /* Ẩn menu con mặc định */
+    position: absolute; /* Đặt vị trí tuyệt đối để hiển thị menu dọc */
+    background-color: #fff; /* Màu nền của menu dọc */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho menu */
+    z-index: 999; /* Đặt độ ưu tiên hiển thị cao hơn */
+    padding: 10px; /* Khoảng cách nội dung bên trong menu */
+}
+
+.navLinkItem:hover .subMenuCon {
+    display: block; /* Hiển thị menu con khi hover vào */
+}
+
+
+    @media (min-width: 992px) {
+    .header {
+        max-width: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding: 0;
+        height: 90px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        position: fixed;
+        z-index: 100;
+        top: 0px;
+    }
+}
+.custom-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+    body {
+    font-family: RobotoRegular, arial, sans-serif;
+    color: #494949;
+    overflow-x: hidden;
+    height: 100% !important;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    background: #a7268e;
+}
+    .navConRow {
+    font-size: x-large;
+    width: 100%;
+    z-index: 980;
+    padding: 0 25px 0 25px;
+}
+    .navi-logo {
+    width: 100px;
+    text-align: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+.navi-logo img {
+    width: 100%;
+    transition: all .15s ease;
+    transform: translateZ(0);
+    height: auto;
+}
+@media (min-width: 992px) {
+    .navConRow .navConRightMain {
+        text-align: center;
+    }
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+   
+}
+@media (min-width: 1100px) {
+    .navConRightMain .navLinkItem {
+        height: 80px;
+        margin: 0 2px;
+    }
+}
+@media (min-width: 992px) {
+    .navConRightMain li {
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 100%;
+        margin: auto;
+        padding-top: 95px;
+    }
+}
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+.section-breed-header {
+    background-image: url(meobia.jpg);
+}
+.section-top {
+    color: #fff;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: -95px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    min-height: 630px;
+    transition: .8s;
+}
+.custom-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+.section-top .bottom-left-text {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding: 30px 35px;
+    position: absolute;
+    width: 35%;
+    bottom: 0;
+    max-width: 700px;
+}
+p {
+    margin: 0 0 10px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.section-breeds-info {
+    color: #fff;
+}
+.section-breeds-info p {
+    padding: 10px 0;
+    font-size: 16px;
+}
+.page-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.custom-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.section-breeds {
+    padding: 45px 15px;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.section-breeds .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .col-lg-2 {
+        width: 16.66666667%;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
+        float: left;
+    }
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 30px;
+    padding-left: 15px;
+}
+.boxBreed {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.section-breeds .img {
+    text-align: center;
+}
+.section-breeds-info {
+    color: #fff;
+}
+.section-breeds-info h2 {
+    font-size: 35px;
+    font-family:'Times New Roman', Times, serif;
+}
+.m-bottom-15 {
+    margin-bottom: 15px;
+}
+.section-breeds-info h3 {
+    font-family:'Times New Roman', Times, serif;
+}
+.h3, h3 {
+    font-size: 24px;
+}
+.ol-faq-sec {
+    margin-top: 20px;
+}
+.ol-faq-sec {
+    list-style: none;
+    padding: 0;
+}
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.faqItem {
+    margin-bottom: 40px;
+    background: #fff;
+    color: #780068;
+}
+.faqBtn {
+    font-size: 30px;
+    padding: 20px 50px 20px 30px;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+b, strong {
+    font-weight: 700;
+}
+
+.faqBtn.active:after {
+    content: '\f077';
+}
+.faqBtn:after {
+    font-size: 20px;
+    padding: 26px;
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.faqAnswer {
+    font-size: 20px;
+    padding: 10px 30px 30px 30px;
+    display: none;
+}
+.footerTop {
+    color: #fff;
+    text-align: center;
+    padding: 0;
+}
+@media (min-width: 992px) {
+    .footerTopItemCon {
+        padding: 40px 20px 80px 20%;
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: row wrap;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+}
+@media (min-width: 992px) {
+    .footerTopItemCon .brandLogo {
+        position: absolute;
+        left: 40px;
+        top: 5px;
+        z-index: 5;
+        width: 130px;
+    }
+}
+@media (min-width: 992px) {
+    .navConRightTop {
+        text-align: right; /* Căn chỉnh văn bản sang phải */
+        margin-left: auto; /* Đẩy phần tử ra ngoài cùng bên phải */
+        margin-bottom: 15px; /* Khoảng cách phía dưới */
+        height: 30px; /* Chiều cao */
+       
+    }
+}
+.list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+}
+@media (min-width: 992px) {
+    .navConRightTop li {
+        vertical-align: middle;
+        margin-left: auto;
+        width: fit-content;
+        background: #6b195b;
+        padding: 8px 8px;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+    }
+}
+</style>
 
 </html>
