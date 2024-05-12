@@ -4,73 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 100px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
+    
 </head>
 <body>
-    <div class="container">
-        <form id="loginForm">
-            <h2>Chào mừng đến cá hồi</h2>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+    <section class="login">
+        <form id="loginForm"> <!-- Thêm id vào form -->
+            <h1>login</h1>
+            <div>
+                <label>
+                    Username
+                </label>
+                <input type="text" id="username"> <!-- Thêm id vào input -->
             </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <div>
+                <label>
+                    Password
+                </label>
+                <input type="password" id="password"> <!-- Thêm id vào input -->
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">Log In</button> <!-- Thêm type="submit" -->
         </form>
-    </div>
-
+    </section>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form submission
@@ -81,14 +35,80 @@
 
             // Validate username and password (example)
             if (username === "huydz" && password === "huy123") {
-                
-                
-            window.location.href = "http://127.0.0.1:5500/index.html";
-        
+                window.location.href = "http://127.0.0.1:5500/index.html";
             } else {
                 alert("Sai thông tin !!!!");
             }
         });
     </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            height: 100vh; /* Chiều cao của toàn bộ trình duyệt */
+            margin: 0; /* Loại bỏ margin mặc định của body */
+            background-color: purple;
+        }
+        section.login{
+            background: url('meodangnhap.jpg') no-repeat;
+            width: 600px;
+            height: 576px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            border-radius:10px ;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        form{
+            background: white;
+            box-sizing: border-box;
+            width: 50%;
+            padding: 40px;
+            flex-direction: column;
+            display: flex;
+            gap: 20px;
+        }
+        h1{
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        label{
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgb(100, 100, 100);
+            
+        }
+        input{
+            width: 200px;
+            border: none;
+            border-bottom: 2px solid #333;
+            padding: 10px 0px;
+            outline: none;
+        }
+        input:focus{
+            border-bottom:2px solid #e0c445 ;
+        }
+
+        button{
+            margin-top: 20px;
+            width: 150px;
+            border: none;
+            background: #333;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            padding: 10px;
+            box-shadow: 2px 2px 0px #e0c445;
+        }
+        button:hover{
+            background: #e0c445;
+            color: #333;
+        }
+    </style>
 </body>
-</html> 
+</html>
