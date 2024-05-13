@@ -111,7 +111,11 @@
         <div class="sec-content-detail">
             <div class="custom-container">
                 <div class="detailHeader">
-                    <img class="anh" src="anhmeo/meo my.jpeg">
+                    <div class="gallery">
+                        <img id="currentImg" src="anhmeo/meo my.jpeg" alt="Image">
+                        <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                     <h1>Mèo Mỹ lông ngắn</h1>
                     <div>
                         <p>Nếu bạn có ý định nuôi một chú mèo nhẹ nhàng, sẵn sàng dành thời gian cho bạn , dễ gần và giàu tình cảm thì mèo lông ngắn Mỹ hay mèo Mỹ lông ngắn chính là chú mèo trong mơ của bạn</p>
@@ -288,14 +292,78 @@
     var answer = btn.nextElementSibling;
     answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
 }
+document.addEventListener("DOMContentLoaded", function() {
+        const currentImg = document.getElementById("currentImg");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        const images = ["anhmeo/meo my.jpeg", "anhmeo/meomy1.jpg", "anhmeo/meomy2.jpg"];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            currentImg.src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        nextBtn.addEventListener("click", nextImage);
+        prevBtn.addEventListener("click", prevImage);
+
+        const intervalTime = 5000;
+        let intervalId;
+
+        function startSlideShow() {
+            intervalId = setInterval(nextImage, intervalTime);
+        }
+
+        function stopSlideShow() {
+            clearInterval(intervalId);
+        }
+
+
+        startSlideShow();
+
+
+        currentImg.addEventListener("mouseenter", stopSlideShow);
+
+
+        currentImg.addEventListener("mouseleave", startSlideShow);
+    });
 </script>
 <style>
+    .gallery {
+            position: relative;
+        }
+        .gallery button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: pink;
+        }
+        #prevBtn {
+            left: 10px;
+        }
+        #nextBtn {
+            right: 10px;
+        }
     p{
   
   line-height: 1.5; /* Đặt khoảng cách giữa các dòng chữ là 1.5 lần kích thước font */
 
 }
-  .anh{
+img{
         border-radius: 50px;
     }
 
@@ -790,6 +858,16 @@ img {
 }
 .detailText {
     padding: 0 150px;
+}
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
 }
 </style>
 </html>

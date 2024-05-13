@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-MySOqV+zDlMOqcLZJjkTnnNFCG+2FrwVFDZpB0gzBz7FhRYStHCTl02aCz49ZhHL" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    
 </head>
 <body class="type1 pageLoaded" default-type="type1" style="overflow-y: auto;">
@@ -113,8 +113,8 @@
                 <div class="detailHeader">
                     <div class="gallery">
                         <img id="currentImg" src="anhmeo/meobatu.jpeg" alt="Image">
-                        <button id="prevBtn">Previous</button>
-                        <button id="nextBtn">Next</button>
+                        <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
                     </div>
                     <h1>
                         Mèo Ba Tư
@@ -311,53 +311,72 @@
     answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
 }
 document.addEventListener("DOMContentLoaded", function() {
-    const currentImg = document.getElementById("currentImg");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+        const currentImg = document.getElementById("currentImg");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
 
-    const images = ["anhmeo/meobatu.jpeg", "anhmeo/batu1.jpg", "anhmeo/batu2.jpg"];
-    let currentIndex = 0;
+        const images = ["anhmeo/meobatu.jpeg", "anhmeo/batu1.jpg", "anhmeo/batu2.jpg"];
+        let currentIndex = 0;
 
-    function showImage(index) {
-        currentImg.src = images[index];
-    }
+        function showImage(index) {
+            currentImg.src = images[index];
+        }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    }
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
 
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    }
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
 
-    nextBtn.addEventListener("click", nextImage);
-    prevBtn.addEventListener("click", prevImage);
+        nextBtn.addEventListener("click", nextImage);
+        prevBtn.addEventListener("click", prevImage);
 
-    const intervalTime = 4000;
-    let intervalId;
+        const intervalTime = 5000;
+        let intervalId;
 
-    function startSlideShow() {
-        intervalId = setInterval(nextImage, intervalTime);
-    }
+        function startSlideShow() {
+            intervalId = setInterval(nextImage, intervalTime);
+        }
 
-    function stopSlideShow() {
-        clearInterval(intervalId);
-    }
-
-  
-    startSlideShow();
-
-   
-    currentImg.addEventListener("mouseenter", stopSlideShow);
+        function stopSlideShow() {
+            clearInterval(intervalId);
+        }
 
 
-    currentImg.addEventListener("mouseleave", startSlideShow);
-});
+        startSlideShow();
+
+
+        currentImg.addEventListener("mouseenter", stopSlideShow);
+
+
+        currentImg.addEventListener("mouseleave", startSlideShow);
+    });
 
 </script>
 <style>
+     .gallery {
+            position: relative;
+        }
+        .gallery button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: pink;
+        }
+        #prevBtn {
+            left: 10px;
+        }
+        #nextBtn {
+            right: 10px;
+        }
     p{
   
   line-height: 1.5; /* Đặt khoảng cách giữa các dòng chữ là 1.5 lần kích thước font */
