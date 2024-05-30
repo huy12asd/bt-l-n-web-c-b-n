@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <section class="login">
-        <form id="loginForm"> <!-- Thêm id vào form -->
-            <h1>login</h1>
+        <form id="loginForm">
+            <h1>Đăng nhập</h1>
             <div>
-                <label>
-                    Username
-                </label>
-                <input type="text" id="username"> <!-- Thêm id vào input -->
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" required>
             </div>
             <div>
-                <label>
-                    Password
-                </label>
-                <input type="password" id="password"> <!-- Thêm id vào input -->
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Log In</button> <!-- Thêm type="submit" -->
+            <button type="submit"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+            <div class="extra-links">
+                <button type="button" id="signup">Đăng ký</button>
+                <button type="button" id="forgotPassword">Quên mật khẩu?</button>
+            </div>
         </form>
     </section>
+    
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form submission
@@ -37,77 +38,123 @@
             if (username === "huydz" && password === "huy123") {
                 window.location.href = "http://127.0.0.1:5500/index.html";
             } else {
-                alert("Sai thông tin !!!!");
+                alert("Sai thông tin đăng nhập !!!");
             }
         });
+
+        document.getElementById("signup").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "http://127.0.0.1:5500/top%20dang%20nhap%20dang%20ky/dangky.html";
+        });
+
+        document.getElementById("forgotPassword").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "http://127.0.0.1:5500/top%20dang%20nhap%20dang%20ky/quenmk.html";
+        });
     </script>
+
     <style>
         body {
             display: flex;
-            justify-content: center; /* Căn giữa theo chiều ngang */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            height: 100vh; /* Chiều cao của toàn bộ trình duyệt */
-            margin: 0; /* Loại bỏ margin mặc định của body */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             background-color: purple;
+            font-family: Arial, sans-serif;
         }
-        section.login{
+
+        section.login {
             background: url('meodangnhap.jpg') no-repeat;
             width: 600px;
             height: 576px;
             background-size: cover;
             background-position: center;
             display: flex;
-            border-radius:10px ;
+            border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
-        form{
-            background: white;
+
+        form {
+            background: rgba(255, 255, 255, 0.8); /* Thêm một lớp mờ cho form */
             box-sizing: border-box;
             width: 50%;
             padding: 40px;
             flex-direction: column;
             display: flex;
             gap: 20px;
+            border-radius: 10px;
         }
-        h1{
+
+        h1 {
             font-size: 32px;
             margin-bottom: 20px;
             text-transform: uppercase;
+            color: #333;
+            text-align: center;
         }
-        label{
+
+        label {
             font-size: 14px;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: rgb(100, 100, 100);
-            
         }
-        input{
-            width: 200px;
+
+        input {
+            width: 100%;
             border: none;
             border-bottom: 2px solid #333;
             padding: 10px 0px;
             outline: none;
-        }
-        input:focus{
-            border-bottom:2px solid #e0c445 ;
+            transition: border-bottom-color 0.3s;
         }
 
-        button{
+        input:focus {
+            border-bottom-color: #e0c445;
+        }
+
+        button {
             margin-top: 20px;
-            width: 150px;
+            width: 100%;
             border: none;
             background: #333;
             color: white;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: bold;
-            padding: 10px;
-            box-shadow: 2px 2px 0px #e0c445;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
         }
-        button:hover{
+
+        button:hover {
             background: #e0c445;
             color: #333;
+        }
+
+        button i {
+            margin-right: 10px;
+        }
+
+        .extra-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .extra-links button {
+            width: calc(50% - 5px);
+            /* -5px để tạo khoảng cách giữa 2 nút */
+        }
+
+        .extra-links button:nth-child(2) {
+            margin-left: 10px;
         }
     </style>
 </body>
