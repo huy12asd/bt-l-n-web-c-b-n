@@ -13,7 +13,7 @@
             <div class="navCon" >
                 <div class="navConRow">
                     <div class="navi-logo">
-                        <a href="http://127.0.0.1:5500/index.html">
+                        <a href="https://meocute.netlify.app/">
                             <picture>
                                 <img src="/logo/logo.png" alt="logo meo" loading="lazy" width="130" height="87">
                             </picture>
@@ -23,7 +23,7 @@
                     <div class="navConRightMain">
                         <ul class="list-inline">
                             <li class="list-inline-item navLinkItem">
-                                <a href="http://127.0.0.1:5500/index.html" title="Trang chủ">Trang chủ</a>
+                                <a href="https://meocute.netlify.app/" title="Trang chủ">Trang chủ</a>
                             </li>
                             <li class="list-inline-item navLinkItem hasSubMenu typeNarrow">
                                 <a href=""><span>Mèo Châu Âu</span></a>
@@ -33,16 +33,16 @@
                                             <div class="links">
                                                 <ul class="list-unstyled header-list">
                                                     <li class>
-                                                        <a href="" title="Mèo mỹ lông ngắn">Mèo mỹ lông ngắn</a>
+                                                        <a href="/web phụ/meomy.html" title="Mèo mỹ lông ngắn">Mèo mỹ lông ngắn</a>
                                                     </li>
                                                     <li class>
-                                                        <a href="" title="Mèo anh lông ngắn">Mèo anh lông ngắn</a>
+                                                        <a href="/web phụ/meoanh.html" title="Mèo anh lông ngắn">Mèo anh lông ngắn</a>
                                                     </li>
                                                     <li class>
-                                                        <a href="" title="Mèo tifanie">Mèo tifanie</a>
+                                                        <a href="/web phụ/meotifanie.html" title="Mèo tifanie">Mèo tifanie</a>
                                                     </li>
                                                     <li class>
-                                                        <a href="" title="Mèo tất trắng">Mèo tất trắng</a>
+                                                        <a href="/web phụ/meotattrang.html" title="Mèo tất trắng">Mèo tất trắng</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -58,17 +58,18 @@
                                             <div class="links">
                                                 <ul class="list-unstyled header-list">
                                                     <li class>
-                                                        <a href="" title="Mèo tai cụp">Mèo tai cụp</a>
+                                                        <a href="/web phụ/meotaicup.html" title="Mèo tai cụp">Mèo tai cụp</a>
                                                     </li>
                                                     <li class>
-                                                        <a href="" title="Mèo begal">Mèo begal</a>
+                                                        <a href="/web phụ/meobegal.html" title="Mèo begal">Mèo begal</a>
+                                                    </li>
+                                                    <li class>  
+                                                        <a href="/web phụ/meobirman.html" title="Mèo Birman">Mèo Birman</a>
                                                     </li>
                                                     <li class>
-                                                        <a href="" title="Mèo Birman">Mèo Birman</a>
+                                                        <a href="/web phụ/meomoggie.html" title="Mèo moggie">Mèo Moggie</a>
                                                     </li>
-                                                    <li class>
-                                                        <a href="" title="Mèo moggie">Mèo Moggie</a>
-                                                    </li>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -83,10 +84,10 @@
                                             <div class="links">
                                                 <ul class="list-unstyled header-list">
                                                     <li class>
-                                                        <a href="" title="Mèo Ba Tư">Mèo Ba Tư</a>
+                                                        <a href="/web phụ/meobatu.html" title="Mèo Ba Tư">Mèo Ba Tư</a>
                                                     </li>
                                                     <li class>
-                                                        <a href="" title="Mèo Ba Tư lông ngắn">Mèo Ba Tư lông ngắn</a>
+                                                        <a href="/web phụ/meobatulongngan.html" title="Mèo Ba Tư lông ngắn">Mèo Ba Tư lông ngắn</a>
                                                     </li>
                                                  </ul>
                                             </div>
@@ -95,7 +96,7 @@
                                 </div>
                             </li>
                             <li class="list-inline-item navLinkItem">
-                                <a href="" title="rrrr....rừ khoái chí">
+                                <a href="/rrr khoai chi/rrrkhoaichi.html" title="rrrr....rừ khoái chí">
                                     Rrrr....rừ khoái chí
                                 </a>
                             </li>
@@ -112,8 +113,9 @@
             <div class="custom-container">
                 <div class="detailHeader">
                     <div class="gallery">
-                        <img id="currentImg" src="anhmeo/meoanh.jpg" alt="Image">
                         <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                        <img id="currentImg" src="anhmeo/meoanh.jpg" alt="Image">
+                       
                         <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
                     </div>
                     <h1>Mèo anh lông ngắn</h1>
@@ -302,52 +304,90 @@
     answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
 }
 document.addEventListener("DOMContentLoaded", function() {
-        const currentImg = document.getElementById("currentImg");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
+            const currentImg = document.getElementById("currentImg");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
 
-        const images = ["anhmeo/meoanh.jpg", "anhmeo/meoanh1.jpg", "anhmeo/meoanh2.jpg"];
-        let currentIndex = 0;
+            const images = ["anhmeo/meoanh.jpg", "anhmeo/meoanh1.jpg", "anhmeo/meoanh2.jpg"];
+            let currentIndex = 0;
 
-        function showImage(index) {
-            currentImg.src = images[index];
-        }
+            function showImage(index, direction) {
+                if (direction === 'left') {
+                    currentImg.classList.add("slide-out-left");
+                } else {
+                    currentImg.classList.add("slide-out-right");
+                }
 
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        }
+                setTimeout(() => {
+                    currentImg.src = images[index];
+                    currentImg.classList.remove("slide-out-left");
+                    currentImg.classList.remove("slide-out-right");
+                    currentImg.classList.add("slide-in");
+                }, 1000); // Thời gian phải trùng với thời gian transition trong CSS
 
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        }
+                setTimeout(() => {
+                    currentImg.classList.remove("slide-in");
+                }, 2000); // Thời gian này đảm bảo lớp 'slide-in' được loại bỏ sau khi chuyển động kết thúc
+            }
 
-        nextBtn.addEventListener("click", nextImage);
-        prevBtn.addEventListener("click", prevImage);
+            function nextImage() {
+                const previousIndex = currentIndex;
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex, 'right');
+            }
 
-        const intervalTime = 5000;
-        let intervalId;
+            function prevImage() {
+                const previousIndex = currentIndex;
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex, 'left');
+            }
 
-        function startSlideShow() {
-            intervalId = setInterval(nextImage, intervalTime);
-        }
+            nextBtn.addEventListener("click", nextImage);
+            prevBtn.addEventListener("click", prevImage);
 
-        function stopSlideShow() {
-            clearInterval(intervalId);
-        }
+            const intervalTime = 5000;
+            let intervalId;
 
+            function startSlideShow() {
+                intervalId = setInterval(nextImage, intervalTime);
+            }
 
-        startSlideShow();
+            function stopSlideShow() {
+                clearInterval(intervalId);
+            }
 
+            startSlideShow();
 
-        currentImg.addEventListener("mouseenter", stopSlideShow);
-
-
-        currentImg.addEventListener("mouseleave", startSlideShow);
-    });
+            currentImg.addEventListener("mouseenter", stopSlideShow);
+            currentImg.addEventListener("mouseleave", startSlideShow);
+        });
+  
 </script>
 <style>
+    
+    #currentImg {
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-out-left {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        .slide-out-right {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        .slide-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        
+
     .gallery {
             position: relative;
         }
