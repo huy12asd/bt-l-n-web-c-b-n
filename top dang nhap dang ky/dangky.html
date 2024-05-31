@@ -4,102 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
-    
-</head>
-<body>
-    <section class="login">
-        <form id="registerForm"> <!-- Thêm id vào form -->
-            <h1>Đăng ký</h1>
-            <div class="input-group">
-                <label for="username">Tên đăng nhập</label>
-                <input type="text" id="username" name="username">
-            </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <div> <!-- Đặt input của email vào một div để có thể sử dụng flex-direction: column -->
-                    <input type="email" id="email" name="email">
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="phoneNumber">Số điện thoại</label>
-                <input type="text" id="phoneNumber" name="phoneNumber">
-            </div>
-            <div class="input-group">
-                <label for="dob">Ngày sinh</label>
-                <input type="date" id="dob" name="dob">
-            </div>
-            <div class="input-group">
-                <label>Giới tính</label>
-                <div class="gender-options">
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Nam</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Nữ</label>
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="city">Tỉnh/Thành phố</label>
-                <input type="text" id="city" name="city">
-            </div>
-            <button type="submit">Đăng ký</button>
-        </form>
-
-    </section>
     <style>
         body {
             display: flex;
-            justify-content: center; /* Căn giữa theo chiều ngang */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            height: 100vh; /* Chiều cao của toàn bộ trình duyệt */
-            margin: 0; /* Loại bỏ margin mặc định của body */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             background-color: purple;
         }
-        section.login{
+        section.login {
             background: url('meo dang ky.webp') no-repeat;
             width: 700px;
-            height: 700px;
+            height: auto; /* Change to auto to adjust to content height */
             background-size: cover;
             background-position: center;
             display: flex;
-            border-radius:10px ;
+            border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
-        form{
-            background: rgba(255, 255, 255, 0.8); /* Thêm một lớp mờ cho form */
+        form {
+            background: rgba(255, 255, 255, 0.8);
             box-sizing: border-box;
-            width: 50%;
+            width: 100%; /* Full width within section */
             padding: 40px;
-            flex-direction: column;
             display: flex;
+            flex-direction: column;
             gap: 20px;
+            max-width: 400px; /* Limit width to ensure it doesn't stretch too far */
+            margin:0%/* Center form horizontally within section */
         }
-        h1{
+        h1 {
             font-size: 32px;
             margin-bottom: 20px;
             text-transform: uppercase;
+            text-align: center; /* Center align the heading */
         }
-        label{
+        label {
             font-size: 14px;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: rgb(100, 100, 100);
-            
         }
-        input{
-            width: 200px;
+        input {
+            width: 100%; /* Full width of the form */
             border: none;
             border-bottom: 2px solid #333;
-            padding: 10px 0px;
+            padding: 10px 0;
             outline: none;
+            background: transparent; /* Transparent background */
         }
-        input:focus{
-            border-bottom:2px solid #e0c445 ;
+        input:focus {
+            border-bottom: 2px solid #e0c445;
         }
-
-        button{
+        button {
             margin-top: 20px;
-            width: 150px;
+            width: 100%; /* Full width within form */
             border: none;
             background: #333;
             color: white;
@@ -108,8 +69,9 @@
             font-weight: bold;
             padding: 10px;
             box-shadow: 2px 2px 0px #e0c445;
+            cursor: pointer;
         }
-        button:hover{
+        button:hover {
             background: #e0c445;
             color: #333;
         }
@@ -122,5 +84,52 @@
             align-items: center;
         }
     </style>
+</head>
+<body>
+    <section class="login">
+        <form id="registerForm">
+            <h1>Đăng ký</h1>
+            <div class="input-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <div>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Số điện thoại</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Ngày sinh</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="input-group">
+                <label>Giới tính</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="city">Tỉnh/Thành phố</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Đăng ký</button>
+        </form>
+    </section>
 </body>
 </html>

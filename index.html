@@ -15,6 +15,20 @@
    
 </head>
 <body class="type1 pageLoaded" default-type="type1" style="overflow-y: auto;">
+
+    
+    
+    <p id="status"></p>
+    <script>
+        if (sessionStorage.getItem('loggedIn') === 'true') {
+            document.getElementById('status').innerText = 'Xin chào, bạn đã đăng nhập.';
+        } else {
+            document.getElementById('status').innerText = 'Bạn chưa đăng nhập.';
+        }
+    </script>
+
+
+
     <header class="header">
         <div class=" custom-container">
             <div class="navCon" >
@@ -50,7 +64,7 @@
                                             <div class="links">
                                                 <ul class="list-unstyled header-list">
                                                     <li class>
-                                                        <a href="/web phụ/meomy.html" title="Mèo mỹ lông ngắn">Mèo mỹ lông ngắn</a>
+                                                        <a href="/web phụ/meomy.html" title="Mèo mỹ lông ngắn" onclick="checkLoginStatus();">Mèo mỹ lông ngắn</a>
                                                     </li>
                                                     <li class>
                                                         <a href="/web phụ/meoanh.html" title="Mèo anh lông ngắn">Mèo anh lông ngắn</a>
@@ -442,7 +456,13 @@ function playSound(event, audioId) {
 
     audio.play(); // Phát âm thanh
 }
-
+//dang nhap 
+function checkLoginStatus() {
+            const isLoggedIn = sessionStorage.getItem('loggedIn');
+            if (isLoggedIn !== 'true') {
+                window.location.href = 'top dang nhap dang ky/dangnhap.html';
+            }
+}
 
 
 
