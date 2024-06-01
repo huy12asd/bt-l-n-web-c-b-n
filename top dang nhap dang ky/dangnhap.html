@@ -36,7 +36,8 @@
 
             // Validate username and password (example)
             if (username === "huydz" && password === "huy123") {
-                window.location.href = "https://meocute.netlify.app/";
+                sessionStorage.setItem('loggedIn', 'true');
+                window.location.href = "/index1.html";
             } else {
                 alert("Sai thông tin đăng nhập !!!");
             }
