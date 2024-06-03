@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="background-container">
     <section class="login">
         <form id="loginForm">
             <h1>Đăng nhập</h1>
@@ -25,6 +26,7 @@
             </div>
         </form>
     </section>
+    </div>
     
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
@@ -35,7 +37,7 @@
             var password = document.getElementById("password").value;
 
             // Validate username and password (example)
-            if (username === "huydz" && password === "huy123") {
+            if (username === "admin" && password === "admin123" ) {
                 sessionStorage.setItem('loggedIn', 'true');
                 window.location.href = "/index1.html";
             } else {
@@ -55,14 +57,30 @@
     </script>
 
     <style>
+       
+
+        .background-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("meo\ dang\ nhap\ linh\ tinh.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Điều chỉnh độ mờ */
+            z-index: -1;
+        }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: purple;
+        
             font-family: Arial, sans-serif;
+         
         }
 
         section.login {

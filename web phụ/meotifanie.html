@@ -23,7 +23,7 @@
                     <div class="navConRightMain">
                         <ul class="list-inline">
                             <li class="list-inline-item navLinkItem">
-                                <a href="/index1" title="Trang chủ">Trang chủ</a>
+                                <a href="/index1.html" title="Trang chủ">Trang chủ</a>
                             </li>
                             <li class="list-inline-item navLinkItem hasSubMenu typeNarrow">
                                 <a href=""><span>Mèo Châu Âu</span></a>
@@ -134,25 +134,45 @@
                     </div>
             </div>
         </div>  
-        <section class="footerTop custom-container" style="display: flex; align-items: center;">
-            <div class="footerTopItemCon">
-                <a href="index.html" class="brandLogo d-none d-lg-block">
-                    <picture>
-                        <img src="/logo/logo.png" alt="logo meo" loading="lazy" width="130" height="87">
-                    </picture>
-                </a>
-            </div>
-            <div class="footerTopItemCon" style="flex-grow: 1;">
-                <p class="d-none d-lg-block">Mèo kun là trang web coi thông tin mèo đầy đủ nhất làm bởi nhóm 9</p>
-            </div>
-            <div class="footerTopItemCon">
-                <label class="social-label">Theo dõi trang tại:</label>
-                <div class="social-list">
-                    <a class="Facebook" href="https://www.facebook.com/profile.php?id=100022435039774">Facebook</a>
-                    <a class="Youtube" href="https://www.youtube.com/watch?v=_nLUJu4ev_c">Youtube</a>
+        <footer class="footer">
+            <div class="footer-container custom-container2">
+    
+                <img src="/logo/logo.png" alt="Whiskas Logo" class="anhfooter">
+                
+                <div class="footer-column footer-logo">
+                 
+                    <div>
+                        <h3>KATGUSU<sup>®</sup></h3>
+                        <ul>
+                            <li><a href="#">Về KATGUSU<sup>®</sup></a></li>
+                            <li><a href="#">Những câu hỏi thường gặp</a></li>
+                            <li><a href="#">Thông tin chủ sở hữu website</a></li>
+                            <li><a href="#">Liên hệ chúng tôi</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section> 
+                <div class="footer-column">
+                    <h3>MÈO NỔI BẬT</h3>
+                    <ul>
+                        <li><a href="#">Mèo Mỹ lông ngắn</a></li>
+                        <li><a href="#">Mèo Birman</a></li>
+                        <li><a href="#">Mèo Ba Tư</a></li>
+                        <li><a href="#">Mèo Tai cụp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CÁC GIỐNG MÈO</h3>
+                </div>
+                <div class="footer-column">
+                    <h3>BÀI VIẾT</h3>
+                    <ul>
+                        <li><a href="#">Rrrr...rừ khoái chí</a></li>
+                        
+                    </ul>
+                </div>
+                </div>
+            
+        </footer>
     </div>
 </body>
 <script>
@@ -213,6 +233,59 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 </script>
 <style>
+      .footer {
+            background-color: #b800a6;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .footer-column h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+        }
+        .footer-logo img {
+            margin-right: 10px;
+        }
+        .anhfooter{
+            width: 120px;
+        
+            margin: auto;
+    padding-right: 150px; 
+    padding-bottom: 50px;
+        }
+        .custom-container2 {
+    max-width: 1440px;
+            margin-right: auto;
+            margin-left: 150px;
+    width: 100%;
+}
     a {
     
     font-size: 20px;

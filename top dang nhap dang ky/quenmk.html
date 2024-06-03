@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="background-container">
     <section class="login">
         <form id="forgotPasswordForm">
             <h1>Quên mật khẩu</h1>
@@ -17,7 +18,7 @@
             <button type="submit">Gửi yêu cầu</button>
         </form>
     </section>
-
+    </div>
     <style>
         body {
             display: flex;
@@ -25,10 +26,22 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: purple;
+            
             font-family: Arial, sans-serif;
         }
-
+        .background-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("hoicham.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Điều chỉnh độ mờ */
+            z-index: -1;
+        }
         section.login {
             background: url('hoicham.jpg') no-repeat;
             width: 600px;

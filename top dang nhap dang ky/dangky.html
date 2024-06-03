@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
     <style>
+        .background-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("meo\ dang\ ky.webp");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Điều chỉnh độ mờ */
+            z-index: -1;
+        }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: purple;
+        
         }
         section.login {
-            background: url('meo dang ky.webp') no-repeat;
+            background: url("dang\ ky\ 1.jpg") no-repeat;
             width: 700px;
             height: auto; /* Change to auto to adjust to content height */
             background-size: cover;
@@ -86,6 +99,7 @@
     </style>
 </head>
 <body>
+    <div class="background-container">
     <section class="login">
         <form id="registerForm">
             <h1>Đăng ký</h1>
@@ -128,8 +142,16 @@
                 <label for="confirmPassword">Xác nhận mật khẩu</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
-            <button type="submit">Đăng ký</button>
+            <button type="submit" id="signin">Đăng ký</button>
         </form>
     </section>
+</div>
+
 </body>
+<script>
+     document.getElementById("signin").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "dangnhap.html";
+        }); 
+</script>
 </html>
